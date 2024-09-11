@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Shop-{company}-{shop_id}",
+ "creation": "2024-09-11 09:01:46.722177",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "information_section",
+  "shop_id",
+  "company",
+  "warehouse_for_selling",
+  "warehouse_for_importing",
+  "location_section",
+  "address",
+  "location",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "state",
+  "country"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse_for_selling",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse For Selling",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse_for_importing",
+   "fieldtype": "Link",
+   "label": "Warehouse For Importing",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "information_section",
+   "fieldtype": "Section Break",
+   "label": "Information"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fetch_from": "address.address_line1",
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.address_line2",
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-11 09:42:23.112957",
+ "modified_by": "Administrator",
+ "module": "Sales App",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
